@@ -1,12 +1,16 @@
 /*
  * Logout Route
  * https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4
+ *
+ * param: app
  */
 module.exports = function(app) {
-    var _Logout = {};
-    config = require('../configurations/server.js');
-    var configs = config.configs,
-        server_prefix = configs.server_prefix || 'CORE';
+  var _Logout = {};
+  var path = require('../libraries/path');
+  var paths = require('../paths/paths');
+  config = require(path.join(paths.configurations, '/configurations.js'))(app);
+  var common = config.common,
+  server_prefix = common.server_prefix || 'PREFIX';
     console.log(server_prefix + " - Routes logout required.");
     var express = require('express'),
         redirect = require('express-redirect'),

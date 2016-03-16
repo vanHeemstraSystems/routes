@@ -1,5 +1,7 @@
 /*
  * Services route
+ *
+ * param: app 
  */
 var config = require('../configurations/server.js');
 var configs = config.configs,

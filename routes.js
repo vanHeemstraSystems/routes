@@ -1,6 +1,8 @@
 /*
  * Routes
  * https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4
+ *
+ * param: app
  */
 module.exports = function(app) {
   var _Routes = {};
